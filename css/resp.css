@@ -1,0 +1,153 @@
+/*************Responsive Styles*****************/
+/***************iPhone Portrait**************/
+@media only screen and (max-width: 479px) and (min-width: 320px){
+.header-nav{
+    flex-direction: column-reverse;
+    align-items: self-start !important;
+}
+.tab-modal-row{
+    flex-direction: column-reverse;
+    align-items: self-start !important; 
+}
+.header-nav .head-text{
+    padding-top: 15px;
+}
+.dashboard-sec .tab-col .tab-text{
+    display: flex;
+    margin-top: 15px;
+}
+.dashboard-sec,
+.calc-sec,
+.partners-sec .partner-box{
+    padding: 12px;
+}
+.service-sec .col-sm-12,
+.partners-sec .col-sm-12{
+    margin-bottom: 15px;
+}
+.home{
+    left: 60px;
+    width: calc(100% - 60px);
+    padding: 20px 12px;
+}
+.date-sec .single-dat .date-text{
+    height: fit-content;
+}
+.partner-box .header-text{
+    flex-direction: column;
+    align-items: self-start !important;
+}
+.partners-sec .partner-box .header-text a{
+    margin-top: 5px;
+}
+.service-sec .about-serv{
+    padding: 10px;
+}
+.create-modal{
+    max-width: 90%;
+    width: 90%;
+}
+
+.modal-col{
+    flex-direction: column;
+    align-items: self-start !important;
+}
+
+.search-col{
+    margin-top: 15px;
+}
+.has-search .form-control{
+    min-width: 100%;
+}
+.export-btn a{
+    margin-bottom: 10px;
+}
+
+}
+/**********************iPhone Landscape*************/
+@media only screen and (max-width: 767px) and (min-width: 480px){
+    .header-nav{
+        flex-direction: column-reverse;
+        align-items: self-start !important;
+    }
+    .tab-modal-row{
+        flex-direction: column-reverse;
+        align-items: self-start !important; 
+    }
+    .header-nav .head-text{
+        padding-top: 15px;
+    }
+    .dashboard-sec .tab-col .tab-text{
+        display: flex;
+        margin-top: 15px;
+    }
+    .dashboard-sec,
+    .calc-sec,
+    .partners-sec .partner-box{
+        padding: 12px;
+    }
+    .service-sec .col-sm-12,
+    .partners-sec .col-sm-12{
+        margin-bottom: 15px;
+    }
+    .home{
+        left: 60px;
+        width: calc(100% - 60px);
+        padding: 20px 12px;
+    }
+    .date-sec .single-dat .date-text{
+        height: fit-content;
+    }
+    .partner-box .header-text{
+        flex-direction: column;
+        align-items: self-start !important;
+    }
+    .partners-sec .partner-box .header-text a{
+        margin-top: 5px;
+    }
+    .service-sec .about-serv{
+        padding: 10px;
+    }
+    .create-modal{
+        max-width: 80%;
+        width: 80%;
+    }
+    .search-col{
+        margin-top: 15px;
+    }
+}
+/*************************iPad Portrait***************/
+@media only screen and (max-width: 985px) and (min-width: 768px){
+
+    .create-modal{
+        max-width: 70%;
+        width: 70%;
+    }
+    .service-sec .col-sm-12,
+    .partners-sec .col-sm-12{
+        margin-bottom: 15px;
+    }
+    .modal-col{
+        flex-direction: column;
+        align-items: self-start !important;
+    }
+    
+    .search-col{
+        margin-top: 15px;
+    }
+    .has-search .form-control{
+        min-width: 100%;
+    }
+    .export-btn a{
+        margin-bottom: 10px;
+    }
+}
+/**************iPad Landscape***************/
+@media only screen and ( max-width: 1024px ) and (min-width: 986px){
+
+    .create-modal{
+        max-width: 60%;
+        width: 60%;
+    }
+}
+/*******************************************/

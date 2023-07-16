@@ -1,0 +1,1169 @@
+<!-- Coding by CodingLab | www.codinglabweb.com -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!----======== CSS ======== -->
+        <link rel="stylesheet" href="style.css" />
+
+        <!----===== Boxicons CSS ===== -->
+        <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/resp.css" />
+
+        <title>Fingent QuoteList</title>
+    </head>
+
+    <body>
+        <nav class="sidebar">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <img src="./assets/logo.svg" alt="" />
+                    </span>
+
+                    <div class="text logo-text">
+                        <span class="name">SIDE SHEET</span>
+                        <span class="profession">Tag line</span>
+                    </div>
+                </div>
+
+                <i class="bx bx-chevron-right toggle"></i>
+            </header>
+
+            <div class="menu-bar">
+                <div class="menu">
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="index.html">
+                                <img src="./assets/dashboard.svg" alt="Fingent" />
+                                <span class="text nav-text">Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="#">
+                                <img src="./assets/marketing.svg" alt="Fingent" />
+                                <span class="text nav-text">Marketing</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="#">
+                                <img src="./assets/classifieds.svg" alt="Fingent" />
+                                <span class="text nav-text">Classifieds</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link active">
+                            <a href="#">
+                                <img src="./assets/qoutes.svg" alt="Fingent" />
+                                <span class="text nav-text">Quotes</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="#">
+                                <img src="./assets/support.svg" alt="Fingent" />
+                                <span class="text nav-text">Support</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="#">
+                                <img src="./assets/settings.svg" alt="Fingent" />
+                                <span class="text nav-text">Configuration</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="home">
+            <div class="header-nav d-flex align-items-center justify-content-between">
+                <div class="head-text">
+                    <h2>Customer Quote List</h2>
+                    <p>Home <span style="color: #545483;">> Customer Quote List</span></p>
+                </div>
+                <div class="profile-nav d-flex align-items-center">
+                    <div class="notify-icon">
+                        <img src="./assets/notification.svg" alt="Fingent" />
+                    </div>
+                    <div class="profile-col d-flex align-items-start pl-3">
+                        <img src="./assets/profile-image.png" alt="Fingent" />
+                        <div class="dropdown pl-2">
+                            <a class="dropdown-toggle" data-toggle="dropdown">
+                                Andre Salmanan
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Settings</a>
+                                <a class="dropdown-item" href="#">Signout</a>
+                            </div>
+                            <p>Admin</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dashboard-sec">
+                <div class="tab-modal-row d-flex align-items-center justify-content-between">
+                    <div class="search-col">
+                        <div class="form-group has-search">
+                            <span class="fa fa-search form-control-feedback"></span>
+                            <input type="text" class="form-control" placeholder="Search by company, quote no." />
+                        </div>
+                    </div>
+                    <div class="modal-col d-flex align-items-center">
+                        <div class="d-flex align-items-center">
+                            <div class="export-btn">
+                                <a href="#"> <img class="pr-2" src="./assets/export.svg" alt="Fingent" />Export CSV </a>
+                            </div>
+                            <div class="export-btn">
+                                <a href="#"> <img class="pr-2" src="./assets/archive.svg" alt="Fingent" />Archive </a>
+                            </div>
+                        </div>
+
+                        <!-- Button to Open the Modal -->
+                        <button type="button" class="btn primary-btn" data-toggle="modal" data-target="#myModal">
+                            Create New Quote
+                        </button>
+
+                        <!-- The Modal -->
+                        <div class="modal" id="myModal">
+                            <div class="modal-dialog create-modal">
+                                <div class="modal-content">
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Create New Quote</h4>
+                                        <button type="button" class="close" data-dismiss="modal"><i class="fa-solid fa-xmark"></i></button>
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                        <form action="">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <div class="form-group">
+                                                        <p>
+                                                            <input type="radio" id="test1" name="radio-group" checked />
+                                                            <label for="test1">Standard</label>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <div class="form-group form-rad">
+                                                        <p>
+                                                            <input type="radio" id="test2" name="radio-group" />
+                                                            <label for="test2">Above 150k</label>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <div class="form-group form-rad">
+                                                        <p>
+                                                            <input type="radio" id="test3" name="radio-group" />
+                                                            <label for="test3">TValue</label>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12"></div>
+
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="">Dealer / Associate Co.</label>
+                                                        <select class="form-select form-control">
+                                                            <option selected>Able Telephone Systems</option>
+                                                            <option value="1">Able Telephone Systems 1</option>
+                                                            <option value="2">Able Telephone Systems 2</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="">Dealer Representative </label>
+                                                        <select class="form-select form-control">
+                                                            <option selected> Dealer Rep is required</option>
+                                                            <option value="1">Dealer Rep is not required</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="">Title</label>
+                                                        <input type="text" class="form-control" placeholder="Acme Corporation" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="">Customer Company <span>*</span></label>
+                                                        <select class="form-select form-control">
+                                                            <option selected> Test Company</option>
+                                                            <option value="1">Test Company 1</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="">Customer Contact Person</label>
+                                                        <input type="text" class="form-control" placeholder="Person test" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="">Customer Email Address</label>
+                                                        <input type="email" class="form-control" placeholder="testacc123fintest@gmail.com" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="">Address 1</label>
+                                                        <input type="text" class="form-control" placeholder="Address 1" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="">Address 2</label>
+                                                        <input type="text" class="form-control" placeholder="Address 1" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="">ZIP</label>
+                                                        <input type="text" class="form-control" placeholder="Address 1" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="">City</label>
+                                                        <input type="text" class="form-control" placeholder="Address 1" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="">State</label>
+                                                        <input type="text" class="form-control" placeholder="Texas" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="">Phone / Fax </label>
+                                                        <input type="text" class="form-control" placeholder="312-422-7194" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="">Quote Reference</label>
+                                                        <input type="text" class="form-control" placeholder="Quote refer" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                        <a class="close-btn" data-dismiss="modal">Cancel</a>
+                                        <button class="primary-btn">Create New Quote</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ft-table">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Quote No.</th>
+                                <th>Company Name</th>
+                                <th>Last Modified</th>
+                                <th>Dealer Name</th>
+                                <th>Dealer Rep Name</th>
+                                <th>Total Cost</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>002142302</td>
+                                <td>Acme Corporation</td>
+                                <td>02/14/2023</td>
+                                <td>Div Dealer</td>
+                                <td>Divya Nair</td>
+                                <td>$17,000</td>
+                                <td>
+                                    <div class="dot"></div>
+                                    Submitted
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa-solid fa-ellipsis"></i>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_344)">
+                                                        <path
+                                                            d="M11.3333 3.99999H14.6667V5.33333H13.3333V14C13.3333 14.1768 13.2631 14.3464 13.1381 14.4714C13.0131 14.5964 12.8435 14.6667 12.6667 14.6667H3.33334C3.15653 14.6667 2.98696 14.5964 2.86194 14.4714C2.73691 14.3464 2.66668 14.1768 2.66668 14V5.33333H1.33334V3.99999H4.66668V1.99999C4.66668 1.82318 4.73691 1.65361 4.86194 1.52859C4.98696 1.40357 5.15653 1.33333 5.33334 1.33333H10.6667C10.8435 1.33333 11.0131 1.40357 11.1381 1.52859C11.2631 1.65361 11.3333 1.82318 11.3333 1.99999V3.99999ZM12 5.33333H4.00001V13.3333H12V5.33333ZM8.94268 9.33333L10.1213 10.512L9.17868 11.4547L8.00001 10.276L6.82134 11.4547L5.87868 10.512L7.05734 9.33333L5.87868 8.15466L6.82134 7.21199L8.00001 8.39066L9.17868 7.21199L10.1213 8.15466L8.94268 9.33333ZM6.00001 2.66666V3.99999H10V2.66666H6.00001Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_344">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Delete Quote
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_359)">
+                                                        <path
+                                                            d="M4.66667 4V2C4.66667 1.82319 4.7369 1.65362 4.86193 1.52859C4.98695 1.40357 5.15652 1.33333 5.33333 1.33333H13.3333C13.5101 1.33333 13.6797 1.40357 13.8047 1.52859C13.9298 1.65362 14 1.82319 14 2V11.3333C14 11.5101 13.9298 11.6797 13.8047 11.8047C13.6797 11.9298 13.5101 12 13.3333 12H11.3333V14C11.3333 14.368 11.0333 14.6667 10.662 14.6667H2.67133C2.58342 14.6672 2.49626 14.6503 2.41488 14.6171C2.3335 14.5838 2.25949 14.5348 2.19711 14.4729C2.13472 14.4109 2.0852 14.3372 2.05137 14.2561C2.01754 14.1749 2.00009 14.0879 2 14L2.002 4.66667C2.002 4.29867 2.302 4 2.67333 4H4.66667ZM3.33533 5.33333L3.33333 13.3333H10V5.33333H3.33533ZM6 4H11.3333V10.6667H12.6667V2.66667H6V4Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_359">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Edit Quote
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_354)">
+                                                        <path
+                                                            d="M2.00001 6.66667H1.33334V2.66867C1.33334 2.29933 1.63668 2 1.99468 2H14.0053C14.0929 1.99982 14.1795 2.01704 14.2603 2.05067C14.3411 2.0843 14.4144 2.13366 14.476 2.19589C14.5375 2.25812 14.5861 2.33196 14.6188 2.41313C14.6516 2.49429 14.6678 2.58116 14.6667 2.66867V6.66667H14V13.334C14.0003 13.4212 13.9834 13.5076 13.9502 13.5883C13.9171 13.6689 13.8684 13.7423 13.8069 13.8041C13.7455 13.866 13.6724 13.9151 13.592 13.9487C13.5115 13.9823 13.4252 13.9997 13.338 14H2.66201C2.57481 13.9997 2.48852 13.9823 2.40806 13.9487C2.3276 13.9151 2.25455 13.866 2.19308 13.8041C2.1316 13.7423 2.08291 13.6689 2.04979 13.5883C2.01666 13.5076 1.99975 13.4212 2.00001 13.334V6.66667ZM12.6667 6.66667H3.33334V12.6667H12.6667V6.66667ZM2.66668 3.33333V5.33333H13.3333V3.33333H2.66668ZM6.00001 8H10V9.33333H6.00001V8Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_354">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Clone Quote
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_359)">
+                                                        <path
+                                                            d="M4.66667 4V2C4.66667 1.82319 4.7369 1.65362 4.86193 1.52859C4.98695 1.40357 5.15652 1.33333 5.33333 1.33333H13.3333C13.5101 1.33333 13.6797 1.40357 13.8047 1.52859C13.9298 1.65362 14 1.82319 14 2V11.3333C14 11.5101 13.9298 11.6797 13.8047 11.8047C13.6797 11.9298 13.5101 12 13.3333 12H11.3333V14C11.3333 14.368 11.0333 14.6667 10.662 14.6667H2.67133C2.58342 14.6672 2.49626 14.6503 2.41488 14.6171C2.3335 14.5838 2.25949 14.5348 2.19711 14.4729C2.13472 14.4109 2.0852 14.3372 2.05137 14.2561C2.01754 14.1749 2.00009 14.0879 2 14L2.002 4.66667C2.002 4.29867 2.302 4 2.67333 4H4.66667ZM3.33533 5.33333L3.33333 13.3333H10V5.33333H3.33533ZM6 4H11.3333V10.6667H12.6667V2.66667H6V4Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_359">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Quote is Archived
+                                            </a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>63110142101</td>
+                                <td>NEC Corporation of America</td>
+                                <td>11/05/2021</td>
+                                <td>Able Telephone Systems</td>
+                                <td>Test Dealer</td>
+                                <td>$6,255</td>
+                                <td>
+                                    <div class="dot"></div>
+                                    Submitted
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa-solid fa-ellipsis"></i>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_344)">
+                                                        <path
+                                                            d="M11.3333 3.99999H14.6667V5.33333H13.3333V14C13.3333 14.1768 13.2631 14.3464 13.1381 14.4714C13.0131 14.5964 12.8435 14.6667 12.6667 14.6667H3.33334C3.15653 14.6667 2.98696 14.5964 2.86194 14.4714C2.73691 14.3464 2.66668 14.1768 2.66668 14V5.33333H1.33334V3.99999H4.66668V1.99999C4.66668 1.82318 4.73691 1.65361 4.86194 1.52859C4.98696 1.40357 5.15653 1.33333 5.33334 1.33333H10.6667C10.8435 1.33333 11.0131 1.40357 11.1381 1.52859C11.2631 1.65361 11.3333 1.82318 11.3333 1.99999V3.99999ZM12 5.33333H4.00001V13.3333H12V5.33333ZM8.94268 9.33333L10.1213 10.512L9.17868 11.4547L8.00001 10.276L6.82134 11.4547L5.87868 10.512L7.05734 9.33333L5.87868 8.15466L6.82134 7.21199L8.00001 8.39066L9.17868 7.21199L10.1213 8.15466L8.94268 9.33333ZM6.00001 2.66666V3.99999H10V2.66666H6.00001Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_344">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Delete Quote
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_359)">
+                                                        <path
+                                                            d="M4.66667 4V2C4.66667 1.82319 4.7369 1.65362 4.86193 1.52859C4.98695 1.40357 5.15652 1.33333 5.33333 1.33333H13.3333C13.5101 1.33333 13.6797 1.40357 13.8047 1.52859C13.9298 1.65362 14 1.82319 14 2V11.3333C14 11.5101 13.9298 11.6797 13.8047 11.8047C13.6797 11.9298 13.5101 12 13.3333 12H11.3333V14C11.3333 14.368 11.0333 14.6667 10.662 14.6667H2.67133C2.58342 14.6672 2.49626 14.6503 2.41488 14.6171C2.3335 14.5838 2.25949 14.5348 2.19711 14.4729C2.13472 14.4109 2.0852 14.3372 2.05137 14.2561C2.01754 14.1749 2.00009 14.0879 2 14L2.002 4.66667C2.002 4.29867 2.302 4 2.67333 4H4.66667ZM3.33533 5.33333L3.33333 13.3333H10V5.33333H3.33533ZM6 4H11.3333V10.6667H12.6667V2.66667H6V4Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_359">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Edit Quote
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_354)">
+                                                        <path
+                                                            d="M2.00001 6.66667H1.33334V2.66867C1.33334 2.29933 1.63668 2 1.99468 2H14.0053C14.0929 1.99982 14.1795 2.01704 14.2603 2.05067C14.3411 2.0843 14.4144 2.13366 14.476 2.19589C14.5375 2.25812 14.5861 2.33196 14.6188 2.41313C14.6516 2.49429 14.6678 2.58116 14.6667 2.66867V6.66667H14V13.334C14.0003 13.4212 13.9834 13.5076 13.9502 13.5883C13.9171 13.6689 13.8684 13.7423 13.8069 13.8041C13.7455 13.866 13.6724 13.9151 13.592 13.9487C13.5115 13.9823 13.4252 13.9997 13.338 14H2.66201C2.57481 13.9997 2.48852 13.9823 2.40806 13.9487C2.3276 13.9151 2.25455 13.866 2.19308 13.8041C2.1316 13.7423 2.08291 13.6689 2.04979 13.5883C2.01666 13.5076 1.99975 13.4212 2.00001 13.334V6.66667ZM12.6667 6.66667H3.33334V12.6667H12.6667V6.66667ZM2.66668 3.33333V5.33333H13.3333V3.33333H2.66668ZM6.00001 8H10V9.33333H6.00001V8Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_354">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Clone Quote
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_359)">
+                                                        <path
+                                                            d="M4.66667 4V2C4.66667 1.82319 4.7369 1.65362 4.86193 1.52859C4.98695 1.40357 5.15652 1.33333 5.33333 1.33333H13.3333C13.5101 1.33333 13.6797 1.40357 13.8047 1.52859C13.9298 1.65362 14 1.82319 14 2V11.3333C14 11.5101 13.9298 11.6797 13.8047 11.8047C13.6797 11.9298 13.5101 12 13.3333 12H11.3333V14C11.3333 14.368 11.0333 14.6667 10.662 14.6667H2.67133C2.58342 14.6672 2.49626 14.6503 2.41488 14.6171C2.3335 14.5838 2.25949 14.5348 2.19711 14.4729C2.13472 14.4109 2.0852 14.3372 2.05137 14.2561C2.01754 14.1749 2.00009 14.0879 2 14L2.002 4.66667C2.002 4.29867 2.302 4 2.67333 4H4.66667ZM3.33533 5.33333L3.33333 13.3333H10V5.33333H3.33533ZM6 4H11.3333V10.6667H12.6667V2.66667H6V4Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_359">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Quote is Archived
+                                            </a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>167411052106</td>
+                                <td>Globex Corporation</td>
+                                <td>11/05/2021</td>
+                                <td>Blueprint Technologies</td>
+                                <td>Aleeta A</td>
+                                <td>$700,000</td>
+                                <td>
+                                    <div class="dot"></div>
+                                    Submitted
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa-solid fa-ellipsis"></i>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_344)">
+                                                        <path
+                                                            d="M11.3333 3.99999H14.6667V5.33333H13.3333V14C13.3333 14.1768 13.2631 14.3464 13.1381 14.4714C13.0131 14.5964 12.8435 14.6667 12.6667 14.6667H3.33334C3.15653 14.6667 2.98696 14.5964 2.86194 14.4714C2.73691 14.3464 2.66668 14.1768 2.66668 14V5.33333H1.33334V3.99999H4.66668V1.99999C4.66668 1.82318 4.73691 1.65361 4.86194 1.52859C4.98696 1.40357 5.15653 1.33333 5.33334 1.33333H10.6667C10.8435 1.33333 11.0131 1.40357 11.1381 1.52859C11.2631 1.65361 11.3333 1.82318 11.3333 1.99999V3.99999ZM12 5.33333H4.00001V13.3333H12V5.33333ZM8.94268 9.33333L10.1213 10.512L9.17868 11.4547L8.00001 10.276L6.82134 11.4547L5.87868 10.512L7.05734 9.33333L5.87868 8.15466L6.82134 7.21199L8.00001 8.39066L9.17868 7.21199L10.1213 8.15466L8.94268 9.33333ZM6.00001 2.66666V3.99999H10V2.66666H6.00001Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_344">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Delete Quote
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_359)">
+                                                        <path
+                                                            d="M4.66667 4V2C4.66667 1.82319 4.7369 1.65362 4.86193 1.52859C4.98695 1.40357 5.15652 1.33333 5.33333 1.33333H13.3333C13.5101 1.33333 13.6797 1.40357 13.8047 1.52859C13.9298 1.65362 14 1.82319 14 2V11.3333C14 11.5101 13.9298 11.6797 13.8047 11.8047C13.6797 11.9298 13.5101 12 13.3333 12H11.3333V14C11.3333 14.368 11.0333 14.6667 10.662 14.6667H2.67133C2.58342 14.6672 2.49626 14.6503 2.41488 14.6171C2.3335 14.5838 2.25949 14.5348 2.19711 14.4729C2.13472 14.4109 2.0852 14.3372 2.05137 14.2561C2.01754 14.1749 2.00009 14.0879 2 14L2.002 4.66667C2.002 4.29867 2.302 4 2.67333 4H4.66667ZM3.33533 5.33333L3.33333 13.3333H10V5.33333H3.33533ZM6 4H11.3333V10.6667H12.6667V2.66667H6V4Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_359">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Edit Quote
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_354)">
+                                                        <path
+                                                            d="M2.00001 6.66667H1.33334V2.66867C1.33334 2.29933 1.63668 2 1.99468 2H14.0053C14.0929 1.99982 14.1795 2.01704 14.2603 2.05067C14.3411 2.0843 14.4144 2.13366 14.476 2.19589C14.5375 2.25812 14.5861 2.33196 14.6188 2.41313C14.6516 2.49429 14.6678 2.58116 14.6667 2.66867V6.66667H14V13.334C14.0003 13.4212 13.9834 13.5076 13.9502 13.5883C13.9171 13.6689 13.8684 13.7423 13.8069 13.8041C13.7455 13.866 13.6724 13.9151 13.592 13.9487C13.5115 13.9823 13.4252 13.9997 13.338 14H2.66201C2.57481 13.9997 2.48852 13.9823 2.40806 13.9487C2.3276 13.9151 2.25455 13.866 2.19308 13.8041C2.1316 13.7423 2.08291 13.6689 2.04979 13.5883C2.01666 13.5076 1.99975 13.4212 2.00001 13.334V6.66667ZM12.6667 6.66667H3.33334V12.6667H12.6667V6.66667ZM2.66668 3.33333V5.33333H13.3333V3.33333H2.66668ZM6.00001 8H10V9.33333H6.00001V8Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_354">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Clone Quote
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_359)">
+                                                        <path
+                                                            d="M4.66667 4V2C4.66667 1.82319 4.7369 1.65362 4.86193 1.52859C4.98695 1.40357 5.15652 1.33333 5.33333 1.33333H13.3333C13.5101 1.33333 13.6797 1.40357 13.8047 1.52859C13.9298 1.65362 14 1.82319 14 2V11.3333C14 11.5101 13.9298 11.6797 13.8047 11.8047C13.6797 11.9298 13.5101 12 13.3333 12H11.3333V14C11.3333 14.368 11.0333 14.6667 10.662 14.6667H2.67133C2.58342 14.6672 2.49626 14.6503 2.41488 14.6171C2.3335 14.5838 2.25949 14.5348 2.19711 14.4729C2.13472 14.4109 2.0852 14.3372 2.05137 14.2561C2.01754 14.1749 2.00009 14.0879 2 14L2.002 4.66667C2.002 4.29867 2.302 4 2.67333 4H4.66667ZM3.33533 5.33333L3.33333 13.3333H10V5.33333H3.33533ZM6 4H11.3333V10.6667H12.6667V2.66667H6V4Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_359">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Quote is Archived
+                                            </a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>167412082102</td>
+                                <td>Soylent Corp</td>
+                                <td>12/08/2021</td>
+                                <td>Blueprint Technologies</td>
+                                <td>Jeremey Smith</td>
+                                <td>$400,000</td>
+                                <td>
+                                    <div class="dot"></div>
+                                    Submitted
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa-solid fa-ellipsis"></i>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_344)">
+                                                        <path
+                                                            d="M11.3333 3.99999H14.6667V5.33333H13.3333V14C13.3333 14.1768 13.2631 14.3464 13.1381 14.4714C13.0131 14.5964 12.8435 14.6667 12.6667 14.6667H3.33334C3.15653 14.6667 2.98696 14.5964 2.86194 14.4714C2.73691 14.3464 2.66668 14.1768 2.66668 14V5.33333H1.33334V3.99999H4.66668V1.99999C4.66668 1.82318 4.73691 1.65361 4.86194 1.52859C4.98696 1.40357 5.15653 1.33333 5.33334 1.33333H10.6667C10.8435 1.33333 11.0131 1.40357 11.1381 1.52859C11.2631 1.65361 11.3333 1.82318 11.3333 1.99999V3.99999ZM12 5.33333H4.00001V13.3333H12V5.33333ZM8.94268 9.33333L10.1213 10.512L9.17868 11.4547L8.00001 10.276L6.82134 11.4547L5.87868 10.512L7.05734 9.33333L5.87868 8.15466L6.82134 7.21199L8.00001 8.39066L9.17868 7.21199L10.1213 8.15466L8.94268 9.33333ZM6.00001 2.66666V3.99999H10V2.66666H6.00001Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_344">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Delete Quote
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_359)">
+                                                        <path
+                                                            d="M4.66667 4V2C4.66667 1.82319 4.7369 1.65362 4.86193 1.52859C4.98695 1.40357 5.15652 1.33333 5.33333 1.33333H13.3333C13.5101 1.33333 13.6797 1.40357 13.8047 1.52859C13.9298 1.65362 14 1.82319 14 2V11.3333C14 11.5101 13.9298 11.6797 13.8047 11.8047C13.6797 11.9298 13.5101 12 13.3333 12H11.3333V14C11.3333 14.368 11.0333 14.6667 10.662 14.6667H2.67133C2.58342 14.6672 2.49626 14.6503 2.41488 14.6171C2.3335 14.5838 2.25949 14.5348 2.19711 14.4729C2.13472 14.4109 2.0852 14.3372 2.05137 14.2561C2.01754 14.1749 2.00009 14.0879 2 14L2.002 4.66667C2.002 4.29867 2.302 4 2.67333 4H4.66667ZM3.33533 5.33333L3.33333 13.3333H10V5.33333H3.33533ZM6 4H11.3333V10.6667H12.6667V2.66667H6V4Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_359">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Edit Quote
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_354)">
+                                                        <path
+                                                            d="M2.00001 6.66667H1.33334V2.66867C1.33334 2.29933 1.63668 2 1.99468 2H14.0053C14.0929 1.99982 14.1795 2.01704 14.2603 2.05067C14.3411 2.0843 14.4144 2.13366 14.476 2.19589C14.5375 2.25812 14.5861 2.33196 14.6188 2.41313C14.6516 2.49429 14.6678 2.58116 14.6667 2.66867V6.66667H14V13.334C14.0003 13.4212 13.9834 13.5076 13.9502 13.5883C13.9171 13.6689 13.8684 13.7423 13.8069 13.8041C13.7455 13.866 13.6724 13.9151 13.592 13.9487C13.5115 13.9823 13.4252 13.9997 13.338 14H2.66201C2.57481 13.9997 2.48852 13.9823 2.40806 13.9487C2.3276 13.9151 2.25455 13.866 2.19308 13.8041C2.1316 13.7423 2.08291 13.6689 2.04979 13.5883C2.01666 13.5076 1.99975 13.4212 2.00001 13.334V6.66667ZM12.6667 6.66667H3.33334V12.6667H12.6667V6.66667ZM2.66668 3.33333V5.33333H13.3333V3.33333H2.66668ZM6.00001 8H10V9.33333H6.00001V8Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_354">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Clone Quote
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_359)">
+                                                        <path
+                                                            d="M4.66667 4V2C4.66667 1.82319 4.7369 1.65362 4.86193 1.52859C4.98695 1.40357 5.15652 1.33333 5.33333 1.33333H13.3333C13.5101 1.33333 13.6797 1.40357 13.8047 1.52859C13.9298 1.65362 14 1.82319 14 2V11.3333C14 11.5101 13.9298 11.6797 13.8047 11.8047C13.6797 11.9298 13.5101 12 13.3333 12H11.3333V14C11.3333 14.368 11.0333 14.6667 10.662 14.6667H2.67133C2.58342 14.6672 2.49626 14.6503 2.41488 14.6171C2.3335 14.5838 2.25949 14.5348 2.19711 14.4729C2.13472 14.4109 2.0852 14.3372 2.05137 14.2561C2.01754 14.1749 2.00009 14.0879 2 14L2.002 4.66667C2.002 4.29867 2.302 4 2.67333 4H4.66667ZM3.33533 5.33333L3.33333 13.3333H10V5.33333H3.33533ZM6 4H11.3333V10.6667H12.6667V2.66667H6V4Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_359">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Quote is Archived
+                                            </a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>167411052106</td>
+                                <td>Initech</td>
+                                <td>01/05/2022</td>
+                                <td>Able Telephone Systems</td>
+                                <td>Test Dealer</td>
+                                <td>$1,000</td>
+                                <td>
+                                    <div class="dot"></div>
+                                    Submitted
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa-solid fa-ellipsis"></i>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_344)">
+                                                        <path
+                                                            d="M11.3333 3.99999H14.6667V5.33333H13.3333V14C13.3333 14.1768 13.2631 14.3464 13.1381 14.4714C13.0131 14.5964 12.8435 14.6667 12.6667 14.6667H3.33334C3.15653 14.6667 2.98696 14.5964 2.86194 14.4714C2.73691 14.3464 2.66668 14.1768 2.66668 14V5.33333H1.33334V3.99999H4.66668V1.99999C4.66668 1.82318 4.73691 1.65361 4.86194 1.52859C4.98696 1.40357 5.15653 1.33333 5.33334 1.33333H10.6667C10.8435 1.33333 11.0131 1.40357 11.1381 1.52859C11.2631 1.65361 11.3333 1.82318 11.3333 1.99999V3.99999ZM12 5.33333H4.00001V13.3333H12V5.33333ZM8.94268 9.33333L10.1213 10.512L9.17868 11.4547L8.00001 10.276L6.82134 11.4547L5.87868 10.512L7.05734 9.33333L5.87868 8.15466L6.82134 7.21199L8.00001 8.39066L9.17868 7.21199L10.1213 8.15466L8.94268 9.33333ZM6.00001 2.66666V3.99999H10V2.66666H6.00001Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_344">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Delete Quote
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_359)">
+                                                        <path
+                                                            d="M4.66667 4V2C4.66667 1.82319 4.7369 1.65362 4.86193 1.52859C4.98695 1.40357 5.15652 1.33333 5.33333 1.33333H13.3333C13.5101 1.33333 13.6797 1.40357 13.8047 1.52859C13.9298 1.65362 14 1.82319 14 2V11.3333C14 11.5101 13.9298 11.6797 13.8047 11.8047C13.6797 11.9298 13.5101 12 13.3333 12H11.3333V14C11.3333 14.368 11.0333 14.6667 10.662 14.6667H2.67133C2.58342 14.6672 2.49626 14.6503 2.41488 14.6171C2.3335 14.5838 2.25949 14.5348 2.19711 14.4729C2.13472 14.4109 2.0852 14.3372 2.05137 14.2561C2.01754 14.1749 2.00009 14.0879 2 14L2.002 4.66667C2.002 4.29867 2.302 4 2.67333 4H4.66667ZM3.33533 5.33333L3.33333 13.3333H10V5.33333H3.33533ZM6 4H11.3333V10.6667H12.6667V2.66667H6V4Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_359">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Edit Quote
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_354)">
+                                                        <path
+                                                            d="M2.00001 6.66667H1.33334V2.66867C1.33334 2.29933 1.63668 2 1.99468 2H14.0053C14.0929 1.99982 14.1795 2.01704 14.2603 2.05067C14.3411 2.0843 14.4144 2.13366 14.476 2.19589C14.5375 2.25812 14.5861 2.33196 14.6188 2.41313C14.6516 2.49429 14.6678 2.58116 14.6667 2.66867V6.66667H14V13.334C14.0003 13.4212 13.9834 13.5076 13.9502 13.5883C13.9171 13.6689 13.8684 13.7423 13.8069 13.8041C13.7455 13.866 13.6724 13.9151 13.592 13.9487C13.5115 13.9823 13.4252 13.9997 13.338 14H2.66201C2.57481 13.9997 2.48852 13.9823 2.40806 13.9487C2.3276 13.9151 2.25455 13.866 2.19308 13.8041C2.1316 13.7423 2.08291 13.6689 2.04979 13.5883C2.01666 13.5076 1.99975 13.4212 2.00001 13.334V6.66667ZM12.6667 6.66667H3.33334V12.6667H12.6667V6.66667ZM2.66668 3.33333V5.33333H13.3333V3.33333H2.66668ZM6.00001 8H10V9.33333H6.00001V8Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_354">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Clone Quote
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_359)">
+                                                        <path
+                                                            d="M4.66667 4V2C4.66667 1.82319 4.7369 1.65362 4.86193 1.52859C4.98695 1.40357 5.15652 1.33333 5.33333 1.33333H13.3333C13.5101 1.33333 13.6797 1.40357 13.8047 1.52859C13.9298 1.65362 14 1.82319 14 2V11.3333C14 11.5101 13.9298 11.6797 13.8047 11.8047C13.6797 11.9298 13.5101 12 13.3333 12H11.3333V14C11.3333 14.368 11.0333 14.6667 10.662 14.6667H2.67133C2.58342 14.6672 2.49626 14.6503 2.41488 14.6171C2.3335 14.5838 2.25949 14.5348 2.19711 14.4729C2.13472 14.4109 2.0852 14.3372 2.05137 14.2561C2.01754 14.1749 2.00009 14.0879 2 14L2.002 4.66667C2.002 4.29867 2.302 4 2.67333 4H4.66667ZM3.33533 5.33333L3.33333 13.3333H10V5.33333H3.33533ZM6 4H11.3333V10.6667H12.6667V2.66667H6V4Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_359">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Quote is Archived
+                                            </a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>167411052106</td>
+                                <td>Umbrella Corporation</td>
+                                <td>10/07/2021</td>
+                                <td>Test Delear</td>
+                                <td>Abbot Name</td>
+                                <td>$560,000</td>
+                                <td>
+                                    <div class="dot"></div>
+                                    Submitted
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa-solid fa-ellipsis"></i>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_344)">
+                                                        <path
+                                                            d="M11.3333 3.99999H14.6667V5.33333H13.3333V14C13.3333 14.1768 13.2631 14.3464 13.1381 14.4714C13.0131 14.5964 12.8435 14.6667 12.6667 14.6667H3.33334C3.15653 14.6667 2.98696 14.5964 2.86194 14.4714C2.73691 14.3464 2.66668 14.1768 2.66668 14V5.33333H1.33334V3.99999H4.66668V1.99999C4.66668 1.82318 4.73691 1.65361 4.86194 1.52859C4.98696 1.40357 5.15653 1.33333 5.33334 1.33333H10.6667C10.8435 1.33333 11.0131 1.40357 11.1381 1.52859C11.2631 1.65361 11.3333 1.82318 11.3333 1.99999V3.99999ZM12 5.33333H4.00001V13.3333H12V5.33333ZM8.94268 9.33333L10.1213 10.512L9.17868 11.4547L8.00001 10.276L6.82134 11.4547L5.87868 10.512L7.05734 9.33333L5.87868 8.15466L6.82134 7.21199L8.00001 8.39066L9.17868 7.21199L10.1213 8.15466L8.94268 9.33333ZM6.00001 2.66666V3.99999H10V2.66666H6.00001Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_344">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Delete Quote
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_359)">
+                                                        <path
+                                                            d="M4.66667 4V2C4.66667 1.82319 4.7369 1.65362 4.86193 1.52859C4.98695 1.40357 5.15652 1.33333 5.33333 1.33333H13.3333C13.5101 1.33333 13.6797 1.40357 13.8047 1.52859C13.9298 1.65362 14 1.82319 14 2V11.3333C14 11.5101 13.9298 11.6797 13.8047 11.8047C13.6797 11.9298 13.5101 12 13.3333 12H11.3333V14C11.3333 14.368 11.0333 14.6667 10.662 14.6667H2.67133C2.58342 14.6672 2.49626 14.6503 2.41488 14.6171C2.3335 14.5838 2.25949 14.5348 2.19711 14.4729C2.13472 14.4109 2.0852 14.3372 2.05137 14.2561C2.01754 14.1749 2.00009 14.0879 2 14L2.002 4.66667C2.002 4.29867 2.302 4 2.67333 4H4.66667ZM3.33533 5.33333L3.33333 13.3333H10V5.33333H3.33533ZM6 4H11.3333V10.6667H12.6667V2.66667H6V4Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_359">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Edit Quote
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_354)">
+                                                        <path
+                                                            d="M2.00001 6.66667H1.33334V2.66867C1.33334 2.29933 1.63668 2 1.99468 2H14.0053C14.0929 1.99982 14.1795 2.01704 14.2603 2.05067C14.3411 2.0843 14.4144 2.13366 14.476 2.19589C14.5375 2.25812 14.5861 2.33196 14.6188 2.41313C14.6516 2.49429 14.6678 2.58116 14.6667 2.66867V6.66667H14V13.334C14.0003 13.4212 13.9834 13.5076 13.9502 13.5883C13.9171 13.6689 13.8684 13.7423 13.8069 13.8041C13.7455 13.866 13.6724 13.9151 13.592 13.9487C13.5115 13.9823 13.4252 13.9997 13.338 14H2.66201C2.57481 13.9997 2.48852 13.9823 2.40806 13.9487C2.3276 13.9151 2.25455 13.866 2.19308 13.8041C2.1316 13.7423 2.08291 13.6689 2.04979 13.5883C2.01666 13.5076 1.99975 13.4212 2.00001 13.334V6.66667ZM12.6667 6.66667H3.33334V12.6667H12.6667V6.66667ZM2.66668 3.33333V5.33333H13.3333V3.33333H2.66668ZM6.00001 8H10V9.33333H6.00001V8Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_354">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Clone Quote
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_359)">
+                                                        <path
+                                                            d="M4.66667 4V2C4.66667 1.82319 4.7369 1.65362 4.86193 1.52859C4.98695 1.40357 5.15652 1.33333 5.33333 1.33333H13.3333C13.5101 1.33333 13.6797 1.40357 13.8047 1.52859C13.9298 1.65362 14 1.82319 14 2V11.3333C14 11.5101 13.9298 11.6797 13.8047 11.8047C13.6797 11.9298 13.5101 12 13.3333 12H11.3333V14C11.3333 14.368 11.0333 14.6667 10.662 14.6667H2.67133C2.58342 14.6672 2.49626 14.6503 2.41488 14.6171C2.3335 14.5838 2.25949 14.5348 2.19711 14.4729C2.13472 14.4109 2.0852 14.3372 2.05137 14.2561C2.01754 14.1749 2.00009 14.0879 2 14L2.002 4.66667C2.002 4.29867 2.302 4 2.67333 4H4.66667ZM3.33533 5.33333L3.33333 13.3333H10V5.33333H3.33533ZM6 4H11.3333V10.6667H12.6667V2.66667H6V4Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_359">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Quote is Archived
+                                            </a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>003182101</td>
+                                <td>Vehement Capital Partners</td>
+                                <td>11/05/2021</td>
+                                <td>Blueprint Technologies</td>
+                                <td>Aleeta A</td>
+                                <td>$600,000</td>
+                                <td>
+                                    <div class="dot"></div>
+                                    Submitted
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa-solid fa-ellipsis"></i>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_344)">
+                                                        <path
+                                                            d="M11.3333 3.99999H14.6667V5.33333H13.3333V14C13.3333 14.1768 13.2631 14.3464 13.1381 14.4714C13.0131 14.5964 12.8435 14.6667 12.6667 14.6667H3.33334C3.15653 14.6667 2.98696 14.5964 2.86194 14.4714C2.73691 14.3464 2.66668 14.1768 2.66668 14V5.33333H1.33334V3.99999H4.66668V1.99999C4.66668 1.82318 4.73691 1.65361 4.86194 1.52859C4.98696 1.40357 5.15653 1.33333 5.33334 1.33333H10.6667C10.8435 1.33333 11.0131 1.40357 11.1381 1.52859C11.2631 1.65361 11.3333 1.82318 11.3333 1.99999V3.99999ZM12 5.33333H4.00001V13.3333H12V5.33333ZM8.94268 9.33333L10.1213 10.512L9.17868 11.4547L8.00001 10.276L6.82134 11.4547L5.87868 10.512L7.05734 9.33333L5.87868 8.15466L6.82134 7.21199L8.00001 8.39066L9.17868 7.21199L10.1213 8.15466L8.94268 9.33333ZM6.00001 2.66666V3.99999H10V2.66666H6.00001Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_344">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Delete Quote
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_359)">
+                                                        <path
+                                                            d="M4.66667 4V2C4.66667 1.82319 4.7369 1.65362 4.86193 1.52859C4.98695 1.40357 5.15652 1.33333 5.33333 1.33333H13.3333C13.5101 1.33333 13.6797 1.40357 13.8047 1.52859C13.9298 1.65362 14 1.82319 14 2V11.3333C14 11.5101 13.9298 11.6797 13.8047 11.8047C13.6797 11.9298 13.5101 12 13.3333 12H11.3333V14C11.3333 14.368 11.0333 14.6667 10.662 14.6667H2.67133C2.58342 14.6672 2.49626 14.6503 2.41488 14.6171C2.3335 14.5838 2.25949 14.5348 2.19711 14.4729C2.13472 14.4109 2.0852 14.3372 2.05137 14.2561C2.01754 14.1749 2.00009 14.0879 2 14L2.002 4.66667C2.002 4.29867 2.302 4 2.67333 4H4.66667ZM3.33533 5.33333L3.33333 13.3333H10V5.33333H3.33533ZM6 4H11.3333V10.6667H12.6667V2.66667H6V4Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_359">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Edit Quote
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_354)">
+                                                        <path
+                                                            d="M2.00001 6.66667H1.33334V2.66867C1.33334 2.29933 1.63668 2 1.99468 2H14.0053C14.0929 1.99982 14.1795 2.01704 14.2603 2.05067C14.3411 2.0843 14.4144 2.13366 14.476 2.19589C14.5375 2.25812 14.5861 2.33196 14.6188 2.41313C14.6516 2.49429 14.6678 2.58116 14.6667 2.66867V6.66667H14V13.334C14.0003 13.4212 13.9834 13.5076 13.9502 13.5883C13.9171 13.6689 13.8684 13.7423 13.8069 13.8041C13.7455 13.866 13.6724 13.9151 13.592 13.9487C13.5115 13.9823 13.4252 13.9997 13.338 14H2.66201C2.57481 13.9997 2.48852 13.9823 2.40806 13.9487C2.3276 13.9151 2.25455 13.866 2.19308 13.8041C2.1316 13.7423 2.08291 13.6689 2.04979 13.5883C2.01666 13.5076 1.99975 13.4212 2.00001 13.334V6.66667ZM12.6667 6.66667H3.33334V12.6667H12.6667V6.66667ZM2.66668 3.33333V5.33333H13.3333V3.33333H2.66668ZM6.00001 8H10V9.33333H6.00001V8Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_354">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Clone Quote
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_359)">
+                                                        <path
+                                                            d="M4.66667 4V2C4.66667 1.82319 4.7369 1.65362 4.86193 1.52859C4.98695 1.40357 5.15652 1.33333 5.33333 1.33333H13.3333C13.5101 1.33333 13.6797 1.40357 13.8047 1.52859C13.9298 1.65362 14 1.82319 14 2V11.3333C14 11.5101 13.9298 11.6797 13.8047 11.8047C13.6797 11.9298 13.5101 12 13.3333 12H11.3333V14C11.3333 14.368 11.0333 14.6667 10.662 14.6667H2.67133C2.58342 14.6672 2.49626 14.6503 2.41488 14.6171C2.3335 14.5838 2.25949 14.5348 2.19711 14.4729C2.13472 14.4109 2.0852 14.3372 2.05137 14.2561C2.01754 14.1749 2.00009 14.0879 2 14L2.002 4.66667C2.002 4.29867 2.302 4 2.67333 4H4.66667ZM3.33533 5.33333L3.33333 13.3333H10V5.33333H3.33533ZM6 4H11.3333V10.6667H12.6667V2.66667H6V4Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_359">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Quote is Archived
+                                            </a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>63110142101</td>
+                                <td>NEC Corporation of America</td>
+                                <td>11/05/2021</td>
+                                <td>Able Telephone Systems</td>
+                                <td>Test Dealer</td>
+                                <td>$6,255</td>
+                                <td class="active">
+                                    <div class="dot"></div>
+                                    Active
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa-solid fa-ellipsis"></i>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_344)">
+                                                        <path
+                                                            d="M11.3333 3.99999H14.6667V5.33333H13.3333V14C13.3333 14.1768 13.2631 14.3464 13.1381 14.4714C13.0131 14.5964 12.8435 14.6667 12.6667 14.6667H3.33334C3.15653 14.6667 2.98696 14.5964 2.86194 14.4714C2.73691 14.3464 2.66668 14.1768 2.66668 14V5.33333H1.33334V3.99999H4.66668V1.99999C4.66668 1.82318 4.73691 1.65361 4.86194 1.52859C4.98696 1.40357 5.15653 1.33333 5.33334 1.33333H10.6667C10.8435 1.33333 11.0131 1.40357 11.1381 1.52859C11.2631 1.65361 11.3333 1.82318 11.3333 1.99999V3.99999ZM12 5.33333H4.00001V13.3333H12V5.33333ZM8.94268 9.33333L10.1213 10.512L9.17868 11.4547L8.00001 10.276L6.82134 11.4547L5.87868 10.512L7.05734 9.33333L5.87868 8.15466L6.82134 7.21199L8.00001 8.39066L9.17868 7.21199L10.1213 8.15466L8.94268 9.33333ZM6.00001 2.66666V3.99999H10V2.66666H6.00001Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_344">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Delete Quote
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_359)">
+                                                        <path
+                                                            d="M4.66667 4V2C4.66667 1.82319 4.7369 1.65362 4.86193 1.52859C4.98695 1.40357 5.15652 1.33333 5.33333 1.33333H13.3333C13.5101 1.33333 13.6797 1.40357 13.8047 1.52859C13.9298 1.65362 14 1.82319 14 2V11.3333C14 11.5101 13.9298 11.6797 13.8047 11.8047C13.6797 11.9298 13.5101 12 13.3333 12H11.3333V14C11.3333 14.368 11.0333 14.6667 10.662 14.6667H2.67133C2.58342 14.6672 2.49626 14.6503 2.41488 14.6171C2.3335 14.5838 2.25949 14.5348 2.19711 14.4729C2.13472 14.4109 2.0852 14.3372 2.05137 14.2561C2.01754 14.1749 2.00009 14.0879 2 14L2.002 4.66667C2.002 4.29867 2.302 4 2.67333 4H4.66667ZM3.33533 5.33333L3.33333 13.3333H10V5.33333H3.33533ZM6 4H11.3333V10.6667H12.6667V2.66667H6V4Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_359">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Edit Quote
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_354)">
+                                                        <path
+                                                            d="M2.00001 6.66667H1.33334V2.66867C1.33334 2.29933 1.63668 2 1.99468 2H14.0053C14.0929 1.99982 14.1795 2.01704 14.2603 2.05067C14.3411 2.0843 14.4144 2.13366 14.476 2.19589C14.5375 2.25812 14.5861 2.33196 14.6188 2.41313C14.6516 2.49429 14.6678 2.58116 14.6667 2.66867V6.66667H14V13.334C14.0003 13.4212 13.9834 13.5076 13.9502 13.5883C13.9171 13.6689 13.8684 13.7423 13.8069 13.8041C13.7455 13.866 13.6724 13.9151 13.592 13.9487C13.5115 13.9823 13.4252 13.9997 13.338 14H2.66201C2.57481 13.9997 2.48852 13.9823 2.40806 13.9487C2.3276 13.9151 2.25455 13.866 2.19308 13.8041C2.1316 13.7423 2.08291 13.6689 2.04979 13.5883C2.01666 13.5076 1.99975 13.4212 2.00001 13.334V6.66667ZM12.6667 6.66667H3.33334V12.6667H12.6667V6.66667ZM2.66668 3.33333V5.33333H13.3333V3.33333H2.66668ZM6.00001 8H10V9.33333H6.00001V8Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_354">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Clone Quote
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_359)">
+                                                        <path
+                                                            d="M4.66667 4V2C4.66667 1.82319 4.7369 1.65362 4.86193 1.52859C4.98695 1.40357 5.15652 1.33333 5.33333 1.33333H13.3333C13.5101 1.33333 13.6797 1.40357 13.8047 1.52859C13.9298 1.65362 14 1.82319 14 2V11.3333C14 11.5101 13.9298 11.6797 13.8047 11.8047C13.6797 11.9298 13.5101 12 13.3333 12H11.3333V14C11.3333 14.368 11.0333 14.6667 10.662 14.6667H2.67133C2.58342 14.6672 2.49626 14.6503 2.41488 14.6171C2.3335 14.5838 2.25949 14.5348 2.19711 14.4729C2.13472 14.4109 2.0852 14.3372 2.05137 14.2561C2.01754 14.1749 2.00009 14.0879 2 14L2.002 4.66667C2.002 4.29867 2.302 4 2.67333 4H4.66667ZM3.33533 5.33333L3.33333 13.3333H10V5.33333H3.33533ZM6 4H11.3333V10.6667H12.6667V2.66667H6V4Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_359">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Quote is Archived
+                                            </a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>167412082102</td>
+                                <td>Massive Dynamic</td>
+                                <td>12/08/2021</td>
+                                <td>Blueprint Technologies</td>
+                                <td>Jeremey Smith</td>
+                                <td>$400,000</td>
+                                <td class="cancel">
+                                    <div class="dot"></div>
+                                    Cancelled
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa-solid fa-ellipsis"></i>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_344)">
+                                                        <path
+                                                            d="M11.3333 3.99999H14.6667V5.33333H13.3333V14C13.3333 14.1768 13.2631 14.3464 13.1381 14.4714C13.0131 14.5964 12.8435 14.6667 12.6667 14.6667H3.33334C3.15653 14.6667 2.98696 14.5964 2.86194 14.4714C2.73691 14.3464 2.66668 14.1768 2.66668 14V5.33333H1.33334V3.99999H4.66668V1.99999C4.66668 1.82318 4.73691 1.65361 4.86194 1.52859C4.98696 1.40357 5.15653 1.33333 5.33334 1.33333H10.6667C10.8435 1.33333 11.0131 1.40357 11.1381 1.52859C11.2631 1.65361 11.3333 1.82318 11.3333 1.99999V3.99999ZM12 5.33333H4.00001V13.3333H12V5.33333ZM8.94268 9.33333L10.1213 10.512L9.17868 11.4547L8.00001 10.276L6.82134 11.4547L5.87868 10.512L7.05734 9.33333L5.87868 8.15466L6.82134 7.21199L8.00001 8.39066L9.17868 7.21199L10.1213 8.15466L8.94268 9.33333ZM6.00001 2.66666V3.99999H10V2.66666H6.00001Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_344">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Delete Quote
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_359)">
+                                                        <path
+                                                            d="M4.66667 4V2C4.66667 1.82319 4.7369 1.65362 4.86193 1.52859C4.98695 1.40357 5.15652 1.33333 5.33333 1.33333H13.3333C13.5101 1.33333 13.6797 1.40357 13.8047 1.52859C13.9298 1.65362 14 1.82319 14 2V11.3333C14 11.5101 13.9298 11.6797 13.8047 11.8047C13.6797 11.9298 13.5101 12 13.3333 12H11.3333V14C11.3333 14.368 11.0333 14.6667 10.662 14.6667H2.67133C2.58342 14.6672 2.49626 14.6503 2.41488 14.6171C2.3335 14.5838 2.25949 14.5348 2.19711 14.4729C2.13472 14.4109 2.0852 14.3372 2.05137 14.2561C2.01754 14.1749 2.00009 14.0879 2 14L2.002 4.66667C2.002 4.29867 2.302 4 2.67333 4H4.66667ZM3.33533 5.33333L3.33333 13.3333H10V5.33333H3.33533ZM6 4H11.3333V10.6667H12.6667V2.66667H6V4Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_359">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Edit Quote
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_354)">
+                                                        <path
+                                                            d="M2.00001 6.66667H1.33334V2.66867C1.33334 2.29933 1.63668 2 1.99468 2H14.0053C14.0929 1.99982 14.1795 2.01704 14.2603 2.05067C14.3411 2.0843 14.4144 2.13366 14.476 2.19589C14.5375 2.25812 14.5861 2.33196 14.6188 2.41313C14.6516 2.49429 14.6678 2.58116 14.6667 2.66867V6.66667H14V13.334C14.0003 13.4212 13.9834 13.5076 13.9502 13.5883C13.9171 13.6689 13.8684 13.7423 13.8069 13.8041C13.7455 13.866 13.6724 13.9151 13.592 13.9487C13.5115 13.9823 13.4252 13.9997 13.338 14H2.66201C2.57481 13.9997 2.48852 13.9823 2.40806 13.9487C2.3276 13.9151 2.25455 13.866 2.19308 13.8041C2.1316 13.7423 2.08291 13.6689 2.04979 13.5883C2.01666 13.5076 1.99975 13.4212 2.00001 13.334V6.66667ZM12.6667 6.66667H3.33334V12.6667H12.6667V6.66667ZM2.66668 3.33333V5.33333H13.3333V3.33333H2.66668ZM6.00001 8H10V9.33333H6.00001V8Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_354">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Clone Quote
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_359)">
+                                                        <path
+                                                            d="M4.66667 4V2C4.66667 1.82319 4.7369 1.65362 4.86193 1.52859C4.98695 1.40357 5.15652 1.33333 5.33333 1.33333H13.3333C13.5101 1.33333 13.6797 1.40357 13.8047 1.52859C13.9298 1.65362 14 1.82319 14 2V11.3333C14 11.5101 13.9298 11.6797 13.8047 11.8047C13.6797 11.9298 13.5101 12 13.3333 12H11.3333V14C11.3333 14.368 11.0333 14.6667 10.662 14.6667H2.67133C2.58342 14.6672 2.49626 14.6503 2.41488 14.6171C2.3335 14.5838 2.25949 14.5348 2.19711 14.4729C2.13472 14.4109 2.0852 14.3372 2.05137 14.2561C2.01754 14.1749 2.00009 14.0879 2 14L2.002 4.66667C2.002 4.29867 2.302 4 2.67333 4H4.66667ZM3.33533 5.33333L3.33333 13.3333H10V5.33333H3.33533ZM6 4H11.3333V10.6667H12.6667V2.66667H6V4Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_359">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Quote is Archived
+                                            </a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>63110142101</td>
+                                <td>NEC Corporation of America</td>
+                                <td>11/05/2021</td>
+                                <td>Able Telephone Systems</td>
+                                <td>Test Dealer</td>
+                                <td>$6,255</td>
+                                <td class="active">
+                                    <div class="dot"></div>
+                                    Active
+                                </td>
+                                <td>
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa-solid fa-ellipsis"></i>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_344)">
+                                                        <path
+                                                            d="M11.3333 3.99999H14.6667V5.33333H13.3333V14C13.3333 14.1768 13.2631 14.3464 13.1381 14.4714C13.0131 14.5964 12.8435 14.6667 12.6667 14.6667H3.33334C3.15653 14.6667 2.98696 14.5964 2.86194 14.4714C2.73691 14.3464 2.66668 14.1768 2.66668 14V5.33333H1.33334V3.99999H4.66668V1.99999C4.66668 1.82318 4.73691 1.65361 4.86194 1.52859C4.98696 1.40357 5.15653 1.33333 5.33334 1.33333H10.6667C10.8435 1.33333 11.0131 1.40357 11.1381 1.52859C11.2631 1.65361 11.3333 1.82318 11.3333 1.99999V3.99999ZM12 5.33333H4.00001V13.3333H12V5.33333ZM8.94268 9.33333L10.1213 10.512L9.17868 11.4547L8.00001 10.276L6.82134 11.4547L5.87868 10.512L7.05734 9.33333L5.87868 8.15466L6.82134 7.21199L8.00001 8.39066L9.17868 7.21199L10.1213 8.15466L8.94268 9.33333ZM6.00001 2.66666V3.99999H10V2.66666H6.00001Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_344">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Delete Quote
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_359)">
+                                                        <path
+                                                            d="M4.66667 4V2C4.66667 1.82319 4.7369 1.65362 4.86193 1.52859C4.98695 1.40357 5.15652 1.33333 5.33333 1.33333H13.3333C13.5101 1.33333 13.6797 1.40357 13.8047 1.52859C13.9298 1.65362 14 1.82319 14 2V11.3333C14 11.5101 13.9298 11.6797 13.8047 11.8047C13.6797 11.9298 13.5101 12 13.3333 12H11.3333V14C11.3333 14.368 11.0333 14.6667 10.662 14.6667H2.67133C2.58342 14.6672 2.49626 14.6503 2.41488 14.6171C2.3335 14.5838 2.25949 14.5348 2.19711 14.4729C2.13472 14.4109 2.0852 14.3372 2.05137 14.2561C2.01754 14.1749 2.00009 14.0879 2 14L2.002 4.66667C2.002 4.29867 2.302 4 2.67333 4H4.66667ZM3.33533 5.33333L3.33333 13.3333H10V5.33333H3.33533ZM6 4H11.3333V10.6667H12.6667V2.66667H6V4Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_359">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Edit Quote
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_354)">
+                                                        <path
+                                                            d="M2.00001 6.66667H1.33334V2.66867C1.33334 2.29933 1.63668 2 1.99468 2H14.0053C14.0929 1.99982 14.1795 2.01704 14.2603 2.05067C14.3411 2.0843 14.4144 2.13366 14.476 2.19589C14.5375 2.25812 14.5861 2.33196 14.6188 2.41313C14.6516 2.49429 14.6678 2.58116 14.6667 2.66867V6.66667H14V13.334C14.0003 13.4212 13.9834 13.5076 13.9502 13.5883C13.9171 13.6689 13.8684 13.7423 13.8069 13.8041C13.7455 13.866 13.6724 13.9151 13.592 13.9487C13.5115 13.9823 13.4252 13.9997 13.338 14H2.66201C2.57481 13.9997 2.48852 13.9823 2.40806 13.9487C2.3276 13.9151 2.25455 13.866 2.19308 13.8041C2.1316 13.7423 2.08291 13.6689 2.04979 13.5883C2.01666 13.5076 1.99975 13.4212 2.00001 13.334V6.66667ZM12.6667 6.66667H3.33334V12.6667H12.6667V6.66667ZM2.66668 3.33333V5.33333H13.3333V3.33333H2.66668ZM6.00001 8H10V9.33333H6.00001V8Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_354">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Clone Quote
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <g clip-path="url(#clip0_1_359)">
+                                                        <path
+                                                            d="M4.66667 4V2C4.66667 1.82319 4.7369 1.65362 4.86193 1.52859C4.98695 1.40357 5.15652 1.33333 5.33333 1.33333H13.3333C13.5101 1.33333 13.6797 1.40357 13.8047 1.52859C13.9298 1.65362 14 1.82319 14 2V11.3333C14 11.5101 13.9298 11.6797 13.8047 11.8047C13.6797 11.9298 13.5101 12 13.3333 12H11.3333V14C11.3333 14.368 11.0333 14.6667 10.662 14.6667H2.67133C2.58342 14.6672 2.49626 14.6503 2.41488 14.6171C2.3335 14.5838 2.25949 14.5348 2.19711 14.4729C2.13472 14.4109 2.0852 14.3372 2.05137 14.2561C2.01754 14.1749 2.00009 14.0879 2 14L2.002 4.66667C2.002 4.29867 2.302 4 2.67333 4H4.66667ZM3.33533 5.33333L3.33333 13.3333H10V5.33333H3.33533ZM6 4H11.3333V10.6667H12.6667V2.66667H6V4Z"
+                                                            fill="#4E4E69"
+                                                        />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_1_359">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Quote is Archived
+                                            </a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- jQuery library -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script src="./script/script.js"></script>
+    </body>
+</html>
